@@ -1,5 +1,5 @@
 :root{
-    --gap: 2vw
+    --gap: 1vw
 }
 
 * {
@@ -8,13 +8,10 @@
 }
 
 main{
-    margin: 10vw;
-}
-
-.main.bottom {
+    margin: 5vw;
     display: flex;
     flex-direction: column;
-    row-gap: 2vh;
+    row-gap: 1vh;
 }
 
 .hehe {
@@ -23,15 +20,28 @@ main{
     gap: var(--gap);
 }
 
+#tete {
+    flex-grow: 3;
+}
+
+#titi{
+    flex-grow: 2;
+}
+
 .hehe.l {
     display: flex;
     height: 60vh;
     gap: var(--gap);
 }
 
-.hehe > div{
+.hehe > div {
     flex-grow: 1;
     border: 1px solid;
+}
+
+.hehe > .hihi {
+    flex-grow: 1;
+    border: none;
 }
 
 .hihi {
