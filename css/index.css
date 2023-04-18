@@ -1,0 +1,52 @@
+:root{
+    --gap: 2vw
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    margin: 10vw;
+}
+
+.main.bottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.hehe {
+    display: flex;
+    height: 15vh;
+    gap: var(--gap);
+}
+
+.hehe.l {
+    display: flex;
+    height: 60vh;
+    gap: var(--gap);
+}
+
+.hehe > div{
+    flex-grow: 1;
+    border: 1px solid;
+}
+
+.hihi {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    border: none;
+}
+
+.hihi > div{
+    flex-grow: 1;
+    border: 1px solid;
+}
+
+.hoho {
+    height: 15vh;
+    border: 1px solid;
+}
