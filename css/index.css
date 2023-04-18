@@ -7,7 +7,7 @@
     margin: 0;
 }
 
-main{
+.containerMain{
     margin: 5vw;
     display: flex;
     flex-direction: column;
@@ -36,11 +36,11 @@ main{
 
 .hehe > div {
     flex-grow: 1;
-    border: 1px solid;
+    border: 0.0625rem solid;
 }
 
 .hehe > .hihi {
-    flex-grow: 1;
+    flex-grow: 3;
     border: none;
 }
 
@@ -52,11 +52,172 @@ main{
 }
 
 .hihi > div{
-    flex-grow: 1;
-    border: 1px solid;
+    flex-grow: 2;
+    border: 0.0625rem solid;
 }
 
 .hoho {
-    height: 15vh;
-    border: 1px solid;
+    height: 10vh;
+    border: 0.0625rem solid;
+}
+
+.hoho1 {
+    height: 10vh;
+}
+
+/* Carrosel de imagens */ 
+
+.slider {
+    display: block;
+    height: 18.3125rem;
+    width: 37.5rem;
+    margin: auto;
+    margin-top: 1.25rem;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 25rem;
+    width: 100%;
+    vertical-align: top;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    background-color: #000;
+    bottom: 0.625rem;
+    cursor: pointer;
+    display: block;
+    height: 0.625rem;
+    position: absolute;
+    width: 0.625rem;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 0.625rem;
+}
+
+.slider li:nth-child(2) label {
+    left: 2.5rem;
+}
+
+.slider li:nth-child(3) label {
+    left: 4.375rem;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+/* Barra de navegação */
+
+nav {
+    display: flex;
+    width: 95.7%;
+    background: #0a5071;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0.9375rem 1.875rem;
+    gap: 3.125rem;
+}
+
+nav .icon {
+    font-size: 2.1875rem;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+}
+
+nav ol{
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+}
+
+nav ol li {
+    margin: 0 0.125rem;
+}
+
+nav ol li a {
+    color: #fff;
+    font-size: 1.25rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 0.0625rem;
+    padding: 0.3125rem 0.625rem;
+
+    transition: 0.3s ease-in;
+}
+
+nav ol li:hover a{
+    background: #fff;
+    color: #0a5071;
+}
+
+nav .search_box {
+    display: flex;
+    margin: auto 0;
+    height: 2.1875rem;
+    line-height: 2.1875rem;
+}
+
+nav .search_box input {
+    border: none;
+    outline: none;
+    background: #fff;
+    height: 100%;
+    padding: 0 0.625rem;
+    font-size: 20px;
+    width: 21.875rem;
+}
+
+nav .search_box span {
+    color: #0a5071;
+    font-size: 1.25rem;
+    background: #fff;
+    height: 55%;
+    padding: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+nav .search_box span::after {
+    height: 100%;
+    width: 0%;
+    content: '';
+    background: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+}
+
+nav .search_box span:hover {
+    color: #fff;
+}
+
+nav .search_box span:hover:after {
+    width: 100%;
 }
