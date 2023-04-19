@@ -43,6 +43,67 @@ nav a:hover{
     background-color: #c0eaff;
 }
 
+/* Carrosel de imagens */ 
+
+.slider {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    position: absolute;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: block;
+    height: 0.625rem;
+    width: 0.625rem;
+    border: 3px solid gray;
+    z-index: 20;
+}
+
+.slider li:nth-child(1) label {
+    left: 1px;
+    bottom: 1%;
+}
+
+.slider li:nth-child(2) label {
+    left: 20px;
+    bottom: 1%;
+}
+
+.slider li:nth-child(3) label {
+    left: 39px;
+    bottom: 1%;
+}
+
+.slider img {
+    align-self: center;
+    max-height: 100%;
+    max-width: 100%;
+    visibility: hidden;
+    object-fit: cover;
+}
+
+.slider li input:checked ~ img {
+    visibility: visible;
+    z-index: 10;
+}
+
 /* classes */
 
 .hehe {
@@ -82,10 +143,6 @@ nav a:hover{
 .hoho {
     height: 15vh;
     border: 1px solid;
-}
-
-.hoho.nav {
-
 }
 
 .separator {
