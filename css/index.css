@@ -1,5 +1,5 @@
 :root{
-    --gap: 1vw
+    --gap: 1.5vh
 }
 
 * {
@@ -7,25 +7,111 @@
     margin: 0;
 }
 
+
 .containerMain{
     margin: 5vw;
     display: flex;
     flex-direction: column;
-    row-gap: 1vh;
+    row-gap: 1.5vh;
 }
+
+body {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+
+nav {
+    letter-spacing: 2px;
+    overflow: hidden;
+    background-color: #8fd3f4;
+    height: 38px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a{
+    padding: 9px 10px;
+    float: left;
+    text-align: center;
+    display: block;
+    outline: 0;
+    color: white;
+}
+
+nav a:hover{
+    background-color: #c0eaff;
+}
+
+/* Carrosel de imagens */ 
+
+.slider {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    position: absolute;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: block;
+    height: 0.625rem;
+    width: 0.625rem;
+    border: 3px solid gray;
+    z-index: 20;
+}
+
+.slider li:nth-child(1) label {
+    left: 1px;
+    bottom: 1%;
+}
+
+.slider li:nth-child(2) label {
+    left: 20px;
+    bottom: 1%;
+}
+
+.slider li:nth-child(3) label {
+    left: 39px;
+    bottom: 1%;
+}
+
+.slider img {
+    align-self: center;
+    max-height: 100%;
+    max-width: 100%;
+    visibility: hidden;
+    object-fit: cover;
+}
+
+.slider li input:checked ~ img {
+    visibility: visible;
+    z-index: 10;
+}
+
+/* classes */
 
 .hehe {
     display: flex;
     height: 15vh;
     gap: var(--gap);
-}
-
-#tete {
-    flex-grow: 3;
-}
-
-#titi{
-    flex-grow: 2;
 }
 
 .hehe.l {
@@ -220,4 +306,92 @@ nav .search_box span:hover {
 
 nav .search_box span:hover:after {
     width: 100%;
+
+    height: 15vh;
+    border: 1px solid;
+}
+
+.busca {
+    float: right;
+}
+
+.busca input[type=text] {
+    padding: 5px;
+    margin-top: 6px;
+    font-size: 15px;
+    border: none;
+}
+
+.busca button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 6px;
+    margin-right: 10px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+/* id's */
+
+#tete {
+    flex-grow: 3;
+}
+
+#titi {
+    flex-grow: 2;
+}
+
+#search-icon::before{
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f002";
+}
+
+/* celular */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background: #ddd;
+    }
+
+    nav {
+        letter-spacing: 2px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        background-color: #8fd3f4;
+        height: 38px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    nav a{
+        padding: 9px 10px;
+        text-align: center;
+        outline: 0;
+        color: white;
+    }
+
+    .hehe {
+        flex-grow: 1;
+        flex-direction: column;
+    }
+
+    .hehe.a {
+        flex-grow: 1;
+        flex-direction: row;
+    }
+
+    .hihi {
+        display: flex;
+        flex-direction: row;
+        gap: var(--gap);
+        border: none;
+    }
+
+    .busca {
+        float: right;
+        display: none;
+    }
+
 }
