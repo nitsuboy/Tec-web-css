@@ -5,6 +5,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -23,11 +24,80 @@ nav {
     overflow: hidden;
     background-color: #8fd3f4;
     height: 38px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 a {
     text-decoration: none;
+}
+
+/* div cabeçalho */
+
+.logo {
+    height: 100%;
+}
+
+.hoho.cabeca {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabeca.left {
+    display: flex;
+}
+
+.cabeca.left div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cabeca.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: self-end;
+}
+
+.cabeca.lang {
+    display: flex;
+    gap: 10px;
+}
+
+.cabeca.lang div{
+    padding: 3px;
+    border: 1px solid;
+}
+
+/* div player */
+
+#player {
+    height: 100%;
+    width: 100%;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.video div{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid;
+}
+
+/* banner */
+
+.hoho.nav {
+    height: 30vh;
+}
+
+.hoho.nav img{
+    object-fit: cover;
+    width: 100%;
 }
 
 /* Carrosel de imagens */
@@ -95,61 +165,61 @@ a {
 
 .hehe {
     display: flex;
+    flex-shrink: 0;
     height: 40vh;
     gap: var(--gap);
 }
 
 .hehe.l {
     display: flex;
+    flex-shrink: 0;
     height: 60vh;
     gap: var(--gap);
 }
 
 .hehe>div {
     flex-grow: 2;
+    flex-shrink: 0;
     border: 1px solid;
 }
 
 .hehe>.hihi {
     flex-grow: 1;
-    border: none;
+    flex-shrink: 0;
 }
 
 .hihi {
     display: flex;
+    flex: 1 0 0;
     flex-direction: column;
     gap: var(--gap);
-    border: none;
+    border: 1px solid;
 }
 
-.hihi>div {
-    flex-grow: 1;
+.hihi > div {
+
+    align-items: center;
+    flex: 1 0 0;
+    display: flex;
+    overflow: hidden;
     border: 1px solid;
 }
 
 .hoho {
     height: 15vh;
     border: 1px solid;
-}
-
-.busca {
-    float: right;
-}
-
-.busca input[type=text] {
-    font-size: 15px;
-    border: none;
+    overflow: hidden;
 }
 
 
 /* id's */
 
 #tete {
-    flex-grow: 3;
+    flex: 3 0 0;
 }
 
 #titi {
-    flex-grow: 2;
+    flex: 2 0 0;
 }
 
 #search-icon::before {
@@ -287,6 +357,106 @@ nav .search_box span:hover:after {
     height: 5.9375rem;
 }
 
+/* Novidades */
+
+.notice {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    overflow-x: hidden;
+    background: #f0f8ff;
+}
+
+.notice {
+    scrollbar-width: thin;
+    scrollbar-color: gray;
+}
+
+.notice::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+.notice::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+}
+
+.notice::-webkit-scrollbar-thumb {
+    background-color: gray;
+}
+
+.txt_notice {
+    color: #000000;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content {
+    width: 100%;
+    min-height: 5.9375rem;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    display: flex;
+    padding: 4px;
+    color: #181818;
+}
+
+.img_content:hover img {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.4s all;
+}
+
+.description_content {
+    padding-left: 5px;
+    padding-right: 4px;
+}
+
+.description_content:hover h3 {
+    cursor: pointer;
+    color: #00772c;
+    transition: 0.4s all;
+}
+
+.txt_add {
+    display: flex;
+    gap: 10px;
+}
+
+.line {
+
+    border: 1px gray solid;
+    margin: 5px;
+}
+
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    max-width: 400px;
+    padding: 5px;
+    background: #f0f8ff;
+}
+
+.icons_aboutUs {
+    display: flex;
+    flex-direction: column;
+}
+
+#icons {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+#icons ::before {
+    height: 40px;
+}
+
+
 /* celular */
 
 @media screen and (max-width: 768px) {
@@ -331,6 +501,10 @@ nav .search_box span:hover:after {
     .busca {
         float: right;
         display: none;
+    }
+
+    .hoho.nav {
+        height: 20vh;
     }
 
 }
