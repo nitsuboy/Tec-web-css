@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-color: #f7f7f7;
 }
 
 main {
@@ -32,6 +32,7 @@ a {
 .hoho.cabeca {
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .cabeca.left {
@@ -175,7 +176,7 @@ a {
 
 .hehe>div {
     flex: 1 0 0;
-    border: 1px solid;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .hehe>.hihi {
@@ -187,7 +188,7 @@ a {
     flex: 1 0 0;
     flex-direction: column;
     gap: var(--gap);
-    border: 1px solid;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .hihi>div {
@@ -196,12 +197,12 @@ a {
     flex: 1 0 0;
     display: flex;
     overflow: hidden;
-    border: 1px solid;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .hoho {
     height: 15vh;
-    border: 1px solid;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     overflow: hidden;
 }
 
@@ -229,7 +230,7 @@ a {
 
 nav {
     display: flex;
-    background: #0a5071;
+    background: #312f2f;
     position: relative;
     justify-content: space-between;
     text-align: center;
@@ -320,9 +321,6 @@ nav .search_box span:hover {
 nav .search_box span:hover:after {
     width: 100%;
 }
-
-
-
 
 /* Top 10 */
 
