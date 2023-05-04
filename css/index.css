@@ -336,7 +336,6 @@ nav .search_box span:hover:after {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: 250px;
-    gap: 10px;
     align-items: center;
     justify-content: center;
     background: #f0f8ff;
@@ -364,10 +363,9 @@ nav .search_box span:hover:after {
     width: fit-content;
     position: absolute;
     opacity: 0.5;
-    padding-right: 10px;
     font-size: 16px;
     padding: 10px;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 50%;
     color: #fff;
     background: #312f2f;
@@ -378,13 +376,14 @@ nav .search_box span:hover:after {
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    font-weight: 600;
-
+    font-weight: 400;
+    margin-top: 5px;
+    transition: all 0.4s ease-in-out;
 }
 
-.card :hover {
+.card img:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.14);
 }
 
 
