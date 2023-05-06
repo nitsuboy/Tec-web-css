@@ -436,7 +436,7 @@ label {
 
 button {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #016097;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -446,7 +446,7 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #312f2f;
 }
 
 /* Top 10 */
