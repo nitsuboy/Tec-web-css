@@ -30,7 +30,6 @@ a {
     min-height: 40vh;
     gap: var(--gap);
     justify-content: center;
-    padding: 10px;
 }
 
 .hehe.l {
@@ -40,12 +39,13 @@ a {
 }
 
 .hehe.tri {
+    flex : 1 0 0;
     flex-direction: column;
     justify-content: space-around;
 }
 
 .hehe>div {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .hehe>.hihi {
@@ -65,18 +65,19 @@ a {
     flex: 1 0 0;
     display: flex;
     overflow: hidden;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .hoho {
-    height: 15vh;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    min-height: 15vh;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     overflow: hidden;
 }
 
 /* cabeçalho */
 
 .hoho.cabeca {
+    height: 15vh;
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -372,16 +373,56 @@ nav .search_box span:hover:after {
     content: "\f002";
 }
 
+/* celular score */
+
+.modelo_item a {
+    color: #636363;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    display: block;
+    font-size: 16px;
+}
+
+.modelo_item {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modelo_item div {
+    display: flex;
+    gap: 5px;
+}
+
+.score {
+    height: fit-content;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #bccce0;
+    color: white;
+}
+
+.score strong {
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.modelo_item .details .features {
+    color: #7da4a9;
+    list-style: none;
+    background: #fff;
+    padding: 10px 8px 10px 10px;
+    box-shadow: 0 0 7px #ddd, 1px 1px 4px #dddddd;
+}
+
 /* Formulário */
+
 .formulario {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     background-image: url('https://img.olhardigital.com.br/wp-content/uploads/2020/12/Apple_announce-iphone12pro_10132020.jpg');
     background-size: cover;
     background-position: center;
@@ -389,18 +430,14 @@ nav .search_box span:hover:after {
     opacity: 0.8;
 }
 
-.formulario form {
-    width: 40%;
-}
-
 .title {
     font-size: 24px;
+    margin-top: 14px;
     margin-bottom: 20px;
     color: #fff;
     text-align: center;
 }
 
-/* estilos dos inputs */
 label {
     display: block;
     margin-bottom: 5px;
@@ -423,23 +460,24 @@ label {
 .inputForm input {
     width: 100%;
     padding: 10px 30px 10px 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
 }
 
+.inputForm input:focus {
+    outline: thin dotted;
+}
 
 .btn {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #016097;
+    background-color: #005f7e;
     color: #fff;
     border: none;
-    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -567,7 +605,7 @@ button:hover {
 
 .description_content:hover h3 {
     cursor: pointer;
-    color: #00772c;
+    color: #005f7e;
     transition: 0.4s all;
 }
 
@@ -610,53 +648,7 @@ button:hover {
     height: 40px;
 }
 
-/* celular score */
-
-.modelo_item a {
-    color: #636363;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300;
-    display: block;
-    font-size: 16px;
-}
-
-.modelo_item {
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.modelo_item div {
-    display: flex;
-    gap: 5px;
-}
-
-.score {
-    height: fit-content;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    padding: 5px;
-    background-color: #bccce0;
-    color: white;
-}
-
-.score strong {
-    font-weight: 400;
-    font-size: 28px;
-}
-
-.modelo_item .details .features {
-    color: #7da4a9;
-    list-style: none;
-    background: #fff;
-    padding: 10px 8px 10px 10px;
-    box-shadow: 0 0 7px #ddd, 1px 1px 4px #dddddd;
-}
-
-
-/* celular */
+/* monitor */
 
 @media screen and (max-width: 1250px) {
     nav {
@@ -693,6 +685,8 @@ button:hover {
         grid-auto-rows: 250px;
     }
 }
+
+/* celular */
 
 @media screen and (max-width: 768px) {
 
