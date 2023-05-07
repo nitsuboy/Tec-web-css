@@ -13,10 +13,10 @@ body {
 }
 
 main {
-    margin: 10px;
+    margin: var(--gap);
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: var(--gap);
 }
 
 a {
@@ -45,11 +45,13 @@ a {
 }
 
 .hehe>div {
+    background-color: aliceblue;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .hehe>.hihi {
     flex: 1 0 0;
+    background-color: #f7f7f7;
     box-shadow: none;
 }
 
@@ -65,11 +67,13 @@ a {
     flex: 1 0 0;
     display: flex;
     overflow: hidden;
+    background-color: aliceblue;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .hoho {
     min-height: 15vh;
+    background-color: aliceblue;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     overflow: hidden;
     position: relative;
@@ -300,6 +304,12 @@ nav .search_box span:hover:after {
     z-index: 10;
 }
 
+/* video and social */
+
+.vs{
+    max-width: 300px;
+}
+
 /* div player */
 
 #player {
@@ -376,19 +386,25 @@ nav .search_box span:hover:after {
 
 /* celular score */
 
-.modelo_item a {
-    color: #636363;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300;
-    display: block;
-    font-size: 16px;
-}
-
 .modelo_item {
     gap: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.modelo_item img {
+    object-fit: clip;
+    width: 60px;
+}
+
+.modelo_item a {
+    color: #000000;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    display: block;
+    font-size: 16px;
 }
 
 .modelo_item div {
@@ -402,8 +418,8 @@ nav .search_box span:hover:after {
     text-align: center;
     flex-direction: column;
     padding: 5px;
-    background-color: #bccce0;
-    color: white;
+    background-color: #005f7e;
+    color: #f7f7f7;
 }
 
 .score strong {
@@ -412,9 +428,13 @@ nav .search_box span:hover:after {
 }
 
 .modelo_item .details .features {
-    color: #7da4a9;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+    color: #707070;
     list-style: none;
-    background: #fff;
+    background: #f7f7f7;
     padding: 10px 8px 10px 10px;
     box-shadow: 0 0 7px #ddd, 1px 1px 4px #dddddd;
 }
@@ -476,7 +496,7 @@ label {
 
 button {
     padding: 10px 20px;
-    background-color: #005f7e;
+    background-color: #007Ba4;
     color: #fff;
     border: none;
     font-size: 16px;
@@ -485,7 +505,7 @@ button {
 }
 
 button:hover {
-    background-color: #312f2f;
+    background-color: #005f7e;
 }
 
 /* Top 10 */
@@ -661,6 +681,48 @@ button:hover {
     height: 40px;
 }
 
+/* footer */
+
+.footer {
+    background-color: #312f2f;
+    justify-content: center;
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer a {
+    color: #979797;
+    font-size: 12px;
+}
+
+.footer a:hover {
+    color: #c7c7c7;
+    font-size: 12px;
+}
+
+.footer span {
+    color: #7c7c7c;
+    font-weight: 600;
+}
+
+.feet {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.feet img{
+    object-fit: contain;
+    height: 30px;
+}
+
+.foot {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+}
 /* monitor */
 
 @media screen and (max-width: 1250px) {
@@ -702,6 +764,9 @@ button:hover {
 /* celular */
 
 @media screen and (max-width: 768px) {
+    .vs{
+        max-width: 100%;
+    }
 
     .logo.m {
         display: block;
