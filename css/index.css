@@ -254,6 +254,33 @@ nav .search_box span:hover:after {
     justify-content: center;
 }
 
+.slider .fundo {
+    opacity: 60%;
+    background-color: black;
+}
+
+.slider li>div {
+    align-self: flex-end;
+    display: flex;
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    flex-direction: column;
+}
+
+.slider li>div>span {
+    font-weight: bold;
+    padding: 10px 0px 0px 10px;
+    align-self: flex-start;
+    color: white;
+}
+
+.slider li>div>p {
+    padding: 0px 0px 0px 10px;
+    align-self: flex-start;
+    color: white;
+}
+
 .slider input {
     display: none;
 }
@@ -300,6 +327,11 @@ nav .search_box span:hover:after {
 }
 
 .slider li input:checked~img {
+    visibility: visible;
+    z-index: 10;
+}
+
+.slider li input:checked~div {
     visibility: visible;
     z-index: 10;
 }
@@ -510,6 +542,13 @@ button:hover {
 
 /* Top 10 */
 
+.titulo {
+    padding: 10px 0 10px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #312f2f;
+}
+
 .txtTrend p {
     font-size: 20px;
     font-weight: 600;
@@ -677,6 +716,19 @@ button:hover {
     height: 40px;
 }
 
+/* propaganda*/
+
+.AD {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.AD img{
+    width: 280px;
+}
+
 /* footer */
 
 .footer {
@@ -760,6 +812,11 @@ button:hover {
 /* celular */
 
 @media screen and (max-width: 768px) {
+    .slider li>div {
+        width: 100%;
+        height: 30%;
+    }
+
     .na {
         max-height: none ;
     }
