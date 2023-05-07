@@ -576,6 +576,10 @@ button:hover {
 
 /* Novidades */
 
+.na {
+    max-height: 400px ;
+}
+
 .notice {
     flex: 3 0 0;
     display: flex;
@@ -611,7 +615,6 @@ button:hover {
 }
 
 .content {
-    width: 100%;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     display: flex;
     padding: 4px;
@@ -651,7 +654,7 @@ button:hover {
     flex: 2 0 0;
     display: grid;
     flex-direction: column;
-    padding: 5px;
+    padding: 0px 10px 10px 10px;
     background: #f0f8ff;
 }
 
@@ -757,6 +760,10 @@ button:hover {
 /* celular */
 
 @media screen and (max-width: 768px) {
+    .na {
+        max-height: none ;
+    }
+
     .vs{
         max-width: 100%;
     }
@@ -812,8 +819,8 @@ button:hover {
     }
 
     .aboutUs {
-        min-width: 100%;
-        padding: 0;
+        gap: 20px;
+        padding: 0 10px 10px 10px;
     }
 
     nav ol {
