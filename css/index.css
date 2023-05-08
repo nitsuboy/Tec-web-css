@@ -862,6 +862,10 @@ button:hover {
         min-width: none;
     }
 
+    .hihi>div {
+        flex-direction: column;
+    }
+
     .slider li>div {
         width: 100%;
         height: 30%;
