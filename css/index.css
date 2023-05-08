@@ -743,8 +743,6 @@ button:hover {
     color: #312f2f;
 }
 
-
-
 /* footer */
 
 .footer {
@@ -787,6 +785,38 @@ button:hover {
     gap: 15px;
     flex-direction: row;
 }
+
+/* Perifericos */
+
+.perifer {
+    display: flex;
+}
+
+.imagePerifer img {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.imagePerifer img:hover {
+    opacity: 0.8;
+}
+
+.descriptPerifer {
+    text-align: start;
+    padding: 10px;
+}
+
+.lowPrice {
+    text-align: center;
+    padding: 10px;
+}
+
+.lowPrice p {
+    font-size: 10px;
+}
+
 /* monitor */
 
 @media screen and (max-width: 1250px) {
