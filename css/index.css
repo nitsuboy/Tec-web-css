@@ -737,11 +737,6 @@ button:hover {
     background-color: #dddddd;
 }
 
-.ad div>img {
-    height: 120px;
-    width: 100%;
-}
-
 .ad label {
     font-size: 50px;
     font-weight: bold;
